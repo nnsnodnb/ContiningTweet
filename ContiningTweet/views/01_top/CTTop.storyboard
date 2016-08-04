@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Top View Controller-->
@@ -14,15 +15,16 @@
                         <viewControllerLayoutGuide type="bottom" id="VbD-26-x8y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zuP-cB-d4Y">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JQ-Ry-Zlm">
-                                <rect key="frame" x="251" y="285" width="99" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JQ-Ry-Zlm">
+                                <rect key="frame" x="98" y="255" width="125" height="58"/>
                                 <color key="backgroundColor" red="1" green="0.47614815105412345" blue="0.32261375722925389" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="99" id="JiK-6k-nyM"/>
+                                    <constraint firstAttribute="width" secondItem="2JQ-Ry-Zlm" secondAttribute="height" multiplier="125:58" id="K2v-mw-vHR"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Tweet">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -39,10 +41,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.27396966425019315" green="0.27954127508461751" blue="0.30140224358974355" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2JQ-Ry-Zlm" firstAttribute="centerY" secondItem="zuP-cB-d4Y" secondAttribute="centerY" id="Ngz-is-6bH"/>
-                            <constraint firstItem="2JQ-Ry-Zlm" firstAttribute="centerX" secondItem="zuP-cB-d4Y" secondAttribute="centerX" id="zcq-hd-55t"/>
+                            <constraint firstItem="2JQ-Ry-Zlm" firstAttribute="centerY" secondItem="zuP-cB-d4Y" secondAttribute="centerY" id="29l-hf-4nk"/>
+                            <constraint firstItem="2JQ-Ry-Zlm" firstAttribute="centerX" secondItem="zuP-cB-d4Y" secondAttribute="centerX" id="46Y-9D-XAG"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCY-tY-2OV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
