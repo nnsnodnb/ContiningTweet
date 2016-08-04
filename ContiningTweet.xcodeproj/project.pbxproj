@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BEEC272C0B1572784B8FC7C /* Pods_ContiningTweet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48673406339F2C70E5EAF0A /* Pods_ContiningTweet.framework */; };
 		CF8095BA1D5373940010F7EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8095B91D5373940010F7EC /* AppDelegate.swift */; };
 		CF8095BC1D5373940010F7EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8095BB1D5373940010F7EC /* ViewController.swift */; };
 		CF8095BF1D5373940010F7EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8095BD1D5373940010F7EC /* Main.storyboard */; };
@@ -14,6 +15,10 @@
 		CF8095C41D5373940010F7EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8095C21D5373940010F7EC /* LaunchScreen.storyboard */; };
 		CF8095CF1D5373940010F7EC /* ContiningTweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8095CE1D5373940010F7EC /* ContiningTweetTests.swift */; };
 		CF8095DA1D5373940010F7EC /* ContiningTweetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8095D91D5373940010F7EC /* ContiningTweetUITests.swift */; };
+		CF8095E91D53743C0010F7EC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8095E71D5373A20010F7EC /* Social.framework */; };
+		CF8095FF1D5380200010F7EC /* CTTop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8095FE1D5380200010F7EC /* CTTop.storyboard */; };
+		CF8096021D5380300010F7EC /* CTTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8096011D5380300010F7EC /* CTTopViewController.swift */; };
+		CF80960B1D53B1AB0010F7EC /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80960A1D53B1AB0010F7EC /* UIColor+Hex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03625322AE5546FAA81FF478 /* Pods-ContiningTweet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContiningTweet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContiningTweet/Pods-ContiningTweet.release.xcconfig"; sourceTree = "<group>"; };
+		947BEA44CC0EAFFCB2A90584 /* Pods-ContiningTweet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContiningTweet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContiningTweet/Pods-ContiningTweet.debug.xcconfig"; sourceTree = "<group>"; };
 		CF8095B61D5373940010F7EC /* ContiningTweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContiningTweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8095B91D5373940010F7EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF8095BB1D5373940010F7EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +55,10 @@
 		CF8095D91D5373940010F7EC /* ContiningTweetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContiningTweetUITests.swift; sourceTree = "<group>"; };
 		CF8095DB1D5373940010F7EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF8095E71D5373A20010F7EC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CF8095FE1D5380200010F7EC /* CTTop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTTop.storyboard; sourceTree = "<group>"; };
+		CF8096011D5380300010F7EC /* CTTopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTTopViewController.swift; sourceTree = "<group>"; };
+		CF80960A1D53B1AB0010F7EC /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		D48673406339F2C70E5EAF0A /* Pods_ContiningTweet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContiningTweet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8095E91D53743C0010F7EC /* Social.framework in Frameworks */,
+				5BEEC272C0B1572784B8FC7C /* Pods_ContiningTweet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,14 +88,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04E45DA306DEA38455A1A9A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				947BEA44CC0EAFFCB2A90584 /* Pods-ContiningTweet.debug.xcconfig */,
+				03625322AE5546FAA81FF478 /* Pods-ContiningTweet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		93BAF8833DB953E8904117AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D48673406339F2C70E5EAF0A /* Pods_ContiningTweet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CF8095AD1D5373940010F7EC = {
 			isa = PBXGroup;
 			children = (
-				CF8095E71D5373A20010F7EC /* Social.framework */,
 				CF8095B81D5373940010F7EC /* ContiningTweet */,
 				CF8095CD1D5373940010F7EC /* ContiningTweetTests */,
 				CF8095D81D5373940010F7EC /* ContiningTweetUITests */,
+				93BAF8833DB953E8904117AD /* Frameworks */,
+				04E45DA306DEA38455A1A9A9 /* Pods */,
 				CF8095B71D5373940010F7EC /* Products */,
+				CF8095E71D5373A20010F7EC /* Social.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +131,12 @@
 		CF8095B81D5373940010F7EC /* ContiningTweet */ = {
 			isa = PBXGroup;
 			children = (
-				CF8095B91D5373940010F7EC /* AppDelegate.swift */,
-				CF8095BB1D5373940010F7EC /* ViewController.swift */,
-				CF8095BD1D5373940010F7EC /* Main.storyboard */,
-				CF8095C01D5373940010F7EC /* Assets.xcassets */,
-				CF8095C21D5373940010F7EC /* LaunchScreen.storyboard */,
-				CF8095C51D5373940010F7EC /* Info.plist */,
+				CF8095F71D537F9F0010F7EC /* controllers */,
+				CF8095F91D537FAB0010F7EC /* delegate */,
+				CF8095F81D537FA60010F7EC /* models */,
+				CF8095FA1D537FB00010F7EC /* resources */,
+				CF8096091D53B1980010F7EC /* utils */,
+				CF8095F61D537F9A0010F7EC /* views */,
 			);
 			path = ContiningTweet;
 			sourceTree = "<group>";
@@ -127,6 +159,89 @@
 			path = ContiningTweetUITests;
 			sourceTree = "<group>";
 		};
+		CF8095F61D537F9A0010F7EC /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CF8095FB1D537FC20010F7EC /* 00_base */,
+				CF8095FD1D537FFE0010F7EC /* 01_top */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		CF8095F71D537F9F0010F7EC /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF8095FC1D537FCF0010F7EC /* 00_base */,
+				CF8096001D5380250010F7EC /* 01_top */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		CF8095F81D537FA60010F7EC /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		CF8095F91D537FAB0010F7EC /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				CF8095B91D5373940010F7EC /* AppDelegate.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
+		CF8095FA1D537FB00010F7EC /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF8095C01D5373940010F7EC /* Assets.xcassets */,
+				CF8095C51D5373940010F7EC /* Info.plist */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		CF8095FB1D537FC20010F7EC /* 00_base */ = {
+			isa = PBXGroup;
+			children = (
+				CF8095C21D5373940010F7EC /* LaunchScreen.storyboard */,
+				CF8095BD1D5373940010F7EC /* Main.storyboard */,
+			);
+			path = 00_base;
+			sourceTree = "<group>";
+		};
+		CF8095FC1D537FCF0010F7EC /* 00_base */ = {
+			isa = PBXGroup;
+			children = (
+				CF8095BB1D5373940010F7EC /* ViewController.swift */,
+			);
+			path = 00_base;
+			sourceTree = "<group>";
+		};
+		CF8095FD1D537FFE0010F7EC /* 01_top */ = {
+			isa = PBXGroup;
+			children = (
+				CF8095FE1D5380200010F7EC /* CTTop.storyboard */,
+			);
+			path = 01_top;
+			sourceTree = "<group>";
+		};
+		CF8096001D5380250010F7EC /* 01_top */ = {
+			isa = PBXGroup;
+			children = (
+				CF8096011D5380300010F7EC /* CTTopViewController.swift */,
+			);
+			path = 01_top;
+			sourceTree = "<group>";
+		};
+		CF8096091D53B1980010F7EC /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				CF80960A1D53B1AB0010F7EC /* UIColor+Hex.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF8095DE1D5373940010F7EC /* Build configuration list for PBXNativeTarget "ContiningTweet" */;
 			buildPhases = (
+				68ABDA771F5D5EC8CEA6918F /* Check Pods Manifest.lock */,
 				CF8095B21D5373940010F7EC /* Sources */,
 				CF8095B31D5373940010F7EC /* Frameworks */,
 				CF8095B41D5373940010F7EC /* Resources */,
+				A359973C08FA00550753E7B4 /* Embed Pods Frameworks */,
+				479B32747D478BB34319A0A5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +313,7 @@
 				TargetAttributes = {
 					CF8095B51D5373940010F7EC = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = K72SHQ4B82;
 					};
 					CF8095C91D5373940010F7EC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -232,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF8095C41D5373940010F7EC /* LaunchScreen.storyboard in Resources */,
+				CF8095FF1D5380200010F7EC /* CTTop.storyboard in Resources */,
 				CF8095C11D5373940010F7EC /* Assets.xcassets in Resources */,
 				CF8095BF1D5373940010F7EC /* Main.storyboard in Resources */,
 			);
@@ -253,11 +373,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		479B32747D478BB34319A0A5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContiningTweet/Pods-ContiningTweet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68ABDA771F5D5EC8CEA6918F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A359973C08FA00550753E7B4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ContiningTweet/Pods-ContiningTweet-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CF8095B21D5373940010F7EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8096021D5380300010F7EC /* CTTopViewController.swift in Sources */,
+				CF80960B1D53B1AB0010F7EC /* UIColor+Hex.swift in Sources */,
 				CF8095BC1D5373940010F7EC /* ViewController.swift in Sources */,
 				CF8095BA1D5373940010F7EC /* AppDelegate.swift in Sources */,
 			);
@@ -301,6 +471,7 @@
 				CF8095BE1D5373940010F7EC /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		CF8095C21D5373940010F7EC /* LaunchScreen.storyboard */ = {
@@ -309,6 +480,7 @@
 				CF8095C31D5373940010F7EC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -401,23 +573,31 @@
 		};
 		CF8095DF1D5373940010F7EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 947BEA44CC0EAFFCB2A90584 /* Pods-ContiningTweet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ContiningTweet/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ContiningTweet/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.ContiningTweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c315681d-a901-42c9-8d3f-d8028efb95d9";
 			};
 			name = Debug;
 		};
 		CF8095E01D5373940010F7EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03625322AE5546FAA81FF478 /* Pods-ContiningTweet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ContiningTweet/Info.plist;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ContiningTweet/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.ContiningTweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c315681d-a901-42c9-8d3f-d8028efb95d9";
 			};
 			name = Release;
 		};
@@ -486,6 +666,7 @@
 				CF8095E01D5373940010F7EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF8095E11D5373940010F7EC /* Build configuration list for PBXNativeTarget "ContiningTweetTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +675,7 @@
 				CF8095E31D5373940010F7EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CF8095E41D5373940010F7EC /* Build configuration list for PBXNativeTarget "ContiningTweetUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +684,7 @@
 				CF8095E61D5373940010F7EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
