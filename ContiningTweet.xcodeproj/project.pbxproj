@@ -14,6 +14,7 @@
 		CF8095C41D5373940010F7EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8095C21D5373940010F7EC /* LaunchScreen.storyboard */; };
 		CF8095CF1D5373940010F7EC /* ContiningTweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8095CE1D5373940010F7EC /* ContiningTweetTests.swift */; };
 		CF8095DA1D5373940010F7EC /* ContiningTweetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8095D91D5373940010F7EC /* ContiningTweetUITests.swift */; };
+		CF8095E91D53743C0010F7EC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF8095E71D5373A20010F7EC /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8095E91D53743C0010F7EC /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
