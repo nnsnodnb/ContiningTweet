@@ -21,16 +21,29 @@ class CTTopViewController: UIViewController {
     var selectedImage : UIImage?
     var twitterPostView = SLComposeViewController()
     
+    @IBOutlet weak var tweetButton: UIButton!
+    
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tweetButton.hidden = true
+        
         let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "twitterLogo")!,
                                                       iconInitialSize: CGSizeMake(100, 100),
                                                       backgroundColor: UIColor.colorWithHex("#3D3D3D", alpha: 1.0))
         
         self.view.addSubview(revealingSplashView)
         
-        revealingSplashView.animationType = SplashAnimationType.SqueezeAndZoomOut
-        revealingSplashView.startAnimation()
+        revealingSplashView.animationType = SplashAnimationType.Twitter
+        revealingSplashView.startAnimation() {
+            if !self.userDefaults.boolForKey("enabled_preference") {
+                self.showTweetViewDialog(.Text)
+            } else {
+                self.tweetButton.hidden = false
+            }
+        }
         
         self.view.backgroundColor = UIColor.colorWithHex("#3D3D3D", alpha: 1.0)
     }
@@ -74,6 +87,20 @@ class CTTopViewController: UIViewController {
         twitterPostView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         switch type {
         case .Text:
+            if !self.userDefaults.boolForKey("enabled_preference") {
+                twitterPostView.completionHandler = {(result:SLComposeViewControllerResult) -> Void in
+                    switch result {
+                    case SLComposeViewControllerResult.Done:
+                        dispatch_after(self.delayTime, dispatch_get_main_queue()) {
+                            self.showTweetViewDialog(.Text)
+                        }
+                    case SLComposeViewControllerResult.Cancelled:
+                        dispatch_after(self.delayTime, dispatch_get_main_queue()) {
+                            self.showTweetViewDialog(.Text)
+                        }
+                    }
+                }
+            }
             self.presentViewController(twitterPostView, animated: true, completion: nil)
         case .CameraRoll:
             pickImageFromLibrary(.CameraRoll)

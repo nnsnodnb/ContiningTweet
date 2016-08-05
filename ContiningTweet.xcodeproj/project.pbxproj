@@ -19,6 +19,7 @@
 		CF8095FF1D5380200010F7EC /* CTTop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8095FE1D5380200010F7EC /* CTTop.storyboard */; };
 		CF8096021D5380300010F7EC /* CTTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8096011D5380300010F7EC /* CTTopViewController.swift */; };
 		CF80960B1D53B1AB0010F7EC /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80960A1D53B1AB0010F7EC /* UIColor+Hex.swift */; };
+		CFFF2CB01D542083003EE92B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFFF2CAF1D542083003EE92B /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		CF8095FE1D5380200010F7EC /* CTTop.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTTop.storyboard; sourceTree = "<group>"; };
 		CF8096011D5380300010F7EC /* CTTopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTTopViewController.swift; sourceTree = "<group>"; };
 		CF80960A1D53B1AB0010F7EC /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		CFFF2CAF1D542083003EE92B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D48673406339F2C70E5EAF0A /* Pods_ContiningTweet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContiningTweet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -197,6 +199,7 @@
 			children = (
 				CF8095C01D5373940010F7EC /* Assets.xcassets */,
 				CF8095C51D5373940010F7EC /* Info.plist */,
+				CFFF2CAF1D542083003EE92B /* Settings.bundle */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			files = (
 				CF8095C41D5373940010F7EC /* LaunchScreen.storyboard in Resources */,
 				CF8095FF1D5380200010F7EC /* CTTop.storyboard in Resources */,
+				CFFF2CB01D542083003EE92B /* Settings.bundle in Resources */,
 				CF8095C11D5373940010F7EC /* Assets.xcassets in Resources */,
 				CF8095BF1D5373940010F7EC /* Main.storyboard in Resources */,
 			);
