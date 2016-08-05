@@ -46,6 +46,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tweetButton" destination="2JQ-Ry-Zlm" id="6pV-e7-5vg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZCY-tY-2OV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
