@@ -5,6 +5,9 @@ use_frameworks!
 
 target 'ContiningTweet' do
     pod 'RevealingSplashView', '~> 0.0'
+    pod 'Firebase'
+    pod 'Firebase/Core'
+    pod 'Firebase/AdMob'
 end
 
 target 'ContiningTweetTests' do

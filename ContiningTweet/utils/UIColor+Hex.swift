@@ -22,4 +22,8 @@ extension UIColor {
             return UIColor.whiteColor();
         }
     }
+    
+    class func themeColor() -> UIColor {
+        return self.colorWithHex("#3D3D3D", alpha: 1.0)
+    }
 }
