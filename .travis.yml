@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode7.3
+xcode_workspace: ContiningTweet.xcworkspace
+xcode_scheme: ContiningTweet
+xcode_sdk: iphonesimulator
