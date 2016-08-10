@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5BEEC272C0B1572784B8FC7C /* Pods_ContiningTweet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D48673406339F2C70E5EAF0A /* Pods_ContiningTweet.framework */; };
-		CF33DEEB1D56380D00D9FDC6 /* CTAdvertisement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF33DEEA1D56380D00D9FDC6 /* CTAdvertisement.storyboard */; };
-		CF33DEEE1D56396800D9FDC6 /* CTAdvertisementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF33DEED1D56396800D9FDC6 /* CTAdvertisementViewController.swift */; };
 		CF8095BA1D5373940010F7EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8095B91D5373940010F7EC /* AppDelegate.swift */; };
 		CF8095BC1D5373940010F7EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8095BB1D5373940010F7EC /* ViewController.swift */; };
 		CF8095BF1D5373940010F7EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF8095BD1D5373940010F7EC /* Main.storyboard */; };
@@ -45,8 +43,6 @@
 /* Begin PBXFileReference section */
 		03625322AE5546FAA81FF478 /* Pods-ContiningTweet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContiningTweet.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContiningTweet/Pods-ContiningTweet.release.xcconfig"; sourceTree = "<group>"; };
 		947BEA44CC0EAFFCB2A90584 /* Pods-ContiningTweet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContiningTweet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContiningTweet/Pods-ContiningTweet.debug.xcconfig"; sourceTree = "<group>"; };
-		CF33DEEA1D56380D00D9FDC6 /* CTAdvertisement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CTAdvertisement.storyboard; sourceTree = "<group>"; };
-		CF33DEED1D56396800D9FDC6 /* CTAdvertisementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTAdvertisementViewController.swift; sourceTree = "<group>"; };
 		CF8095B61D5373940010F7EC /* ContiningTweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContiningTweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF8095B91D5373940010F7EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF8095BB1D5373940010F7EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,22 +112,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CF33DEE81D56321200D9FDC6 /* advertisement */ = {
-			isa = PBXGroup;
-			children = (
-				CF33DEEA1D56380D00D9FDC6 /* CTAdvertisement.storyboard */,
-			);
-			path = advertisement;
-			sourceTree = "<group>";
-		};
-		CF33DEEC1D56393E00D9FDC6 /* advertisement */ = {
-			isa = PBXGroup;
-			children = (
-				CF33DEED1D56396800D9FDC6 /* CTAdvertisementViewController.swift */,
-			);
-			name = advertisement;
-			sourceTree = "<group>";
-		};
 		CF8095AD1D5373940010F7EC = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +170,6 @@
 			children = (
 				CF8095FB1D537FC20010F7EC /* 00_base */,
 				CF8095FD1D537FFE0010F7EC /* 01_top */,
-				CF33DEE81D56321200D9FDC6 /* advertisement */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -200,7 +179,6 @@
 			children = (
 				CF8095FC1D537FCF0010F7EC /* 00_base */,
 				CF8096001D5380250010F7EC /* 01_top */,
-				CF33DEEC1D56393E00D9FDC6 /* advertisement */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -386,7 +364,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF33DEEB1D56380D00D9FDC6 /* CTAdvertisement.storyboard in Resources */,
 				CF8095C41D5373940010F7EC /* LaunchScreen.storyboard in Resources */,
 				CF8095FF1D5380200010F7EC /* CTTop.storyboard in Resources */,
 				CFFF2CB01D542083003EE92B /* Settings.bundle in Resources */,
@@ -468,7 +445,6 @@
 				CF8096021D5380300010F7EC /* CTTopViewController.swift in Sources */,
 				CF80960B1D53B1AB0010F7EC /* UIColor+Hex.swift in Sources */,
 				CF8095BC1D5373940010F7EC /* ViewController.swift in Sources */,
-				CF33DEEE1D56396800D9FDC6 /* CTAdvertisementViewController.swift in Sources */,
 				CF8095BA1D5373940010F7EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
