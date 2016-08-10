@@ -50,6 +50,7 @@ class CTTopViewController: UIViewController {
         splashSetup()
         firebaseSetup()
         advertisementSetup()
+        outletSetup()
         tweetButton.hidden = true
         view.backgroundColor = UIColor.themeColor()
         userDefaults.setObject(0, forKey: "numberOfTweet")
@@ -114,6 +115,14 @@ class CTTopViewController: UIViewController {
             userDefaults.setObject(true, forKey: "isFirstLaunch")
             userDefaults.setObject(0, forKey: "numberOfTweet")
         }
+    }
+    
+    private func outletSetup() {
+        tweetButton.exclusiveTouch = true
+        bannerView.exclusiveTouch = true
+        popupAdvertisementView.exclusiveTouch = true
+        advertisementBackgruondView.exclusiveTouch = true
+        advertisementCloseButton.exclusiveTouch = true
     }
     
     // MARK: - IBAction
