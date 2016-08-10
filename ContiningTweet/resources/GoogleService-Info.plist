@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>484279728477-i5geo9imbunmr2qq0fnthmkf47ckhhbl.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.484279728477-i5geo9imbunmr2qq0fnthmkf47ckhhbl</string>
+	<key>API_KEY</key>
+	<string>AIzaSyADyVQmz6Vo6_BxsZxPAblSav8QdCBl2Vw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>484279728477</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>moe.nnsnodnb.ContiningTweet</string>
+	<key>PROJECT_ID</key>
+	<string>continingtweet</string>
+	<key>STORAGE_BUCKET</key>
+	<string>continingtweet.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:484279728477:ios:0a2599ddf5eab1c3</string>
+	<key>DATABASE_URL</key>
+	<string>https://continingtweet.firebaseio.com</string>
+</dict>
+</plist>

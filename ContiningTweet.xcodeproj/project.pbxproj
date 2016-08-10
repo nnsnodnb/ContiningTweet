@@ -20,6 +20,7 @@
 		CF8096021D5380300010F7EC /* CTTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8096011D5380300010F7EC /* CTTopViewController.swift */; };
 		CF80960B1D53B1AB0010F7EC /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF80960A1D53B1AB0010F7EC /* UIColor+Hex.swift */; };
 		CFFF2CB01D542083003EE92B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFFF2CAF1D542083003EE92B /* Settings.bundle */; };
+		CFFF2D291D55C78A003EE92B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFFF2D281D55C78A003EE92B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		CF8096011D5380300010F7EC /* CTTopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTTopViewController.swift; sourceTree = "<group>"; };
 		CF80960A1D53B1AB0010F7EC /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		CFFF2CAF1D542083003EE92B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		CFFF2D281D55C78A003EE92B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CFFF2D2B1D560DDC003EE92B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D48673406339F2C70E5EAF0A /* Pods_ContiningTweet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ContiningTweet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -102,6 +105,8 @@
 		93BAF8833DB953E8904117AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF8095E71D5373A20010F7EC /* Social.framework */,
+				CFFF2D2B1D560DDC003EE92B /* Security.framework */,
 				D48673406339F2C70E5EAF0A /* Pods_ContiningTweet.framework */,
 			);
 			name = Frameworks;
@@ -116,7 +121,6 @@
 				93BAF8833DB953E8904117AD /* Frameworks */,
 				04E45DA306DEA38455A1A9A9 /* Pods */,
 				CF8095B71D5373940010F7EC /* Products */,
-				CF8095E71D5373A20010F7EC /* Social.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				CF8095C01D5373940010F7EC /* Assets.xcassets */,
+				CFFF2D281D55C78A003EE92B /* GoogleService-Info.plist */,
 				CF8095C51D5373940010F7EC /* Info.plist */,
 				CFFF2CAF1D542083003EE92B /* Settings.bundle */,
 			);
@@ -310,6 +315,7 @@
 		CF8095AE1D5373940010F7EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CT;
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = nnsnodnb;
@@ -317,6 +323,11 @@
 					CF8095B51D5373940010F7EC = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = K72SHQ4B82;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					CF8095C91D5373940010F7EC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -358,6 +369,7 @@
 				CFFF2CB01D542083003EE92B /* Settings.bundle in Resources */,
 				CF8095C11D5373940010F7EC /* Assets.xcassets in Resources */,
 				CF8095BF1D5373940010F7EC /* Main.storyboard in Resources */,
+				CFFF2D291D55C78A003EE92B /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +592,7 @@
 			baseConfigurationReference = 947BEA44CC0EAFFCB2A90584 /* Pods-ContiningTweet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContiningTweet/resources/Info.plist;
@@ -588,6 +601,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.ContiningTweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c315681d-a901-42c9-8d3f-d8028efb95d9";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContiningTweet/ContiningTweet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -596,6 +611,7 @@
 			baseConfigurationReference = 03625322AE5546FAA81FF478 /* Pods-ContiningTweet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContiningTweet/resources/Info.plist;
@@ -604,6 +620,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.ContiningTweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "c315681d-a901-42c9-8d3f-d8028efb95d9";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContiningTweet/ContiningTweet-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -9,6 +9,9 @@
 import UIKit
 import Social
 import RevealingSplashView
+import Firebase
+import FirebaseAnalytics
+import GoogleMobileAds
 
 enum TweetStyle {
     case Text
@@ -17,41 +20,103 @@ enum TweetStyle {
 }
 
 class CTTopViewController: UIViewController {
-
-    var selectedImage : UIImage?
-    var twitterPostView = SLComposeViewController()
+    
+    private var selectedImage : UIImage?
+    private var twitterPostView = SLComposeViewController()
     
     @IBOutlet weak var tweetButton: UIButton!
+    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var popupAdvertisementView: GADBannerView!
+    @IBOutlet weak var advertisementBackgruondView: UIView!
+    @IBOutlet weak var advertisementCloseButton: UIButton!
     
-    let userDefaults = NSUserDefaults.standardUserDefaults()
-    let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(1.0 * Double(NSEC_PER_SEC)))
+    private let userDefaults = NSUserDefaults.standardUserDefaults()
+    private let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.1 * Double(NSEC_PER_SEC)))
+    private let adUnitID = "ca-app-pub-3417597686353524/5064687299"
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tweetButton.hidden = true
-        
-        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "twitterLogo")!,
-                                                      iconInitialSize: CGSizeMake(100, 100),
-                                                      backgroundColor: UIColor.colorWithHex("#3D3D3D", alpha: 1.0))
-        
-        self.view.addSubview(revealingSplashView)
-        
-        revealingSplashView.animationType = SplashAnimationType.Twitter
-        revealingSplashView.startAnimation() {
-            if !self.userDefaults.boolForKey("enabled_preference") {
-                self.showTweetViewDialog(.Text)
-            } else {
-                self.tweetButton.hidden = false
-            }
-        }
-        
-        self.view.backgroundColor = UIColor.colorWithHex("#3D3D3D", alpha: 1.0)
+        setup()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Setup
+    private func setup() {
+        bannerSetup()
+        splashSetup()
+        firebaseSetup()
+        advertisementSetup()
+        tweetButton.hidden = true
+        view.backgroundColor = UIColor.themeColor()
+        userDefaults.setObject(0, forKey: "numberOfTweet")
+    }
+    
+    private func bannerSetup() {
+        bannerView.adUnitID = adUnitID
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
+        
+        popupAdvertisementView.adSize = kGADAdSizeMediumRectangle
+        popupAdvertisementView.adUnitID = adUnitID
+        popupAdvertisementView.rootViewController = self
+        popupAdvertisementView.loadRequest(GADRequest())
+        offPopupAdvertisementView()
+    }
+    
+    private func splashSetup() {
+        let revealingSplashView = RevealingSplashView(iconImage: UIImage(named: "twitterLogo")!,
+                                                iconInitialSize: CGSizeMake(100, 100),
+                                                backgroundColor: UIColor.themeColor())
+        
+        view.addSubview(revealingSplashView)
+        
+        revealingSplashView.animationType = SplashAnimationType.Twitter
+        revealingSplashView.startAnimation() {
+            self.twitterPostView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            if !self.userDefaults.boolForKey("enabled_preference") {
+                // Only Text
+                self.twitterPostView.completionHandler = {(result:SLComposeViewControllerResult) -> Void in
+                    switch result {
+                    case SLComposeViewControllerResult.Done:
+                        dispatch_after(self.delayTime, dispatch_get_main_queue()) {
+                            self.showTweetViewDialogWithImageFalse()
+                        }
+                    case SLComposeViewControllerResult.Cancelled:
+                        dispatch_after(self.delayTime, dispatch_get_main_queue()) {
+                            self.showTweetViewDialogWithImageFalse()
+                        }
+                    }
+                }
+                self.bannerView.hidden = true
+                self.presentViewController(self.twitterPostView, animated: true, completion: nil)
+            } else {
+                // Enable With Image
+                self.tweetButton.hidden = false
+            }
+        }
+    }
+    
+    private func firebaseSetup() {
+        FIRAnalytics.logEventWithName(kFIREventSelectContent,
+                                      parameters: [
+                                        kFIRParameterContentType:"cont",
+                                        kFIRParameterItemID:"1"
+            ])
+        FIRAnalytics.setUserPropertyString("TopScreen", forName: "boot_application")
+    }
+    
+    private func advertisementSetup() {
+        if !userDefaults.boolForKey("isFirstLaunch") {
+            userDefaults.setObject(true, forKey: "isFirstLaunch")
+            userDefaults.setObject(0, forKey: "numberOfTweet")
+        }
+    }
+    
+    // MARK: - IBAction
     @IBAction func tweet(sender: AnyObject) {
         let alert: UIAlertController = UIAlertController(title: "選択方法を選択",
                                                          message: nil,
@@ -59,17 +124,17 @@ class CTTopViewController: UIViewController {
         
         let onlyText = UIAlertAction(title: "テキストのみ",
                                      style: .Default) { action in
-                                        self.showTweetViewDialog(.Text)
+                                                self.showTweetViewDialogWithImageTrue(.Text)
         }
         
         let cameraRollImage = UIAlertAction(title: "カメラロールから選択",
                                             style: .Default) { action in
-                                                self.showTweetViewDialog(.CameraRoll)
+                                                self.showTweetViewDialogWithImageTrue(.CameraRoll)
         }
         
         let cameraTakeImage = UIAlertAction(title: "カメラで撮影",
                                             style: .Default) { action in
-                                                self.showTweetViewDialog(.Photo)
+                                                self.showTweetViewDialogWithImageTrue(.Photo)
         }
         
         let cancel = UIAlertAction(title: "キャンセル",
@@ -83,30 +148,81 @@ class CTTopViewController: UIViewController {
         presentViewController(alert, animated: true, completion: nil)
     }
     
-    private func showTweetViewDialog(type:TweetStyle) {
+    @IBAction func advertisementClose(sender: AnyObject) {
+        offPopupAdvertisementView()
+        if !userDefaults.boolForKey("enabled_preference") {
+            showTweetViewDialogWithImageFalse()
+        }
+    }
+    
+    // MARK: - Private funtion
+    private func onPopupAdvertisementView() {
+        advertisementBackgruondView.hidden = false
+        popupAdvertisementView.hidden = false
+        advertisementCloseButton.hidden = false
+    }
+    
+    private func offPopupAdvertisementView() {
+        advertisementBackgruondView.hidden = true
+        popupAdvertisementView.hidden = true
+        advertisementCloseButton.hidden = true
+    }
+    
+    private func showTweetViewDialogWithImageTrue(type:TweetStyle) {
         twitterPostView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         switch type {
         case .Text:
-            if !self.userDefaults.boolForKey("enabled_preference") {
-                twitterPostView.completionHandler = {(result:SLComposeViewControllerResult) -> Void in
-                    switch result {
-                    case SLComposeViewControllerResult.Done:
-                        dispatch_after(self.delayTime, dispatch_get_main_queue()) {
-                            self.showTweetViewDialog(.Text)
-                        }
-                    case SLComposeViewControllerResult.Cancelled:
-                        dispatch_after(self.delayTime, dispatch_get_main_queue()) {
-                            self.showTweetViewDialog(.Text)
+            twitterPostView.completionHandler = {(result:SLComposeViewControllerResult) -> Void in
+                switch result {
+                case SLComposeViewControllerResult.Done:
+                    self.countUpNumberOfTweet()
+                    dispatch_after(self.delayTime, dispatch_get_main_queue()) {
+                        if self.userDefaults.integerForKey("numberOfTweet") == 5 {
+                            self.userDefaultsWithAdvertisement()
                         }
                     }
+                case SLComposeViewControllerResult.Cancelled:
+                    break
                 }
             }
-            self.presentViewController(twitterPostView, animated: true, completion: nil)
+            self.presentViewController(self.twitterPostView, animated: true, completion: nil)
         case .CameraRoll:
             pickImageFromLibrary(.CameraRoll)
         case .Photo:
             pickImageFromLibrary(.Photo)
         }
+    }
+    
+    private func showTweetViewDialogWithImageFalse() {
+        twitterPostView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        twitterPostView.completionHandler = {(result:SLComposeViewControllerResult) -> Void in
+            switch result {
+            case SLComposeViewControllerResult.Done:
+                dispatch_after(self.delayTime, dispatch_get_main_queue()) {
+                    self.countUpNumberOfTweet()
+                    if Float(self.userDefaults.integerForKey("numberOfTweet")) - 0.5 > 2.5 {
+                        self.userDefaultsWithAdvertisement()
+                    } else {
+                        self.showTweetViewDialogWithImageFalse()
+                    }
+                }
+            case SLComposeViewControllerResult.Cancelled:
+                dispatch_after(self.delayTime, dispatch_get_main_queue()) {
+                    self.showTweetViewDialogWithImageFalse()
+                }
+            }
+        }
+        presentViewController(twitterPostView, animated: true, completion: nil)
+    }
+    
+    private func userDefaultsWithAdvertisement() {
+        userDefaults.setObject(0, forKey: "numberOfTweet")
+        onPopupAdvertisementView()
+    }
+    
+    private func countUpNumberOfTweet() {
+        let numberOfTweet = userDefaults.integerForKey("numberOfTweet") + 1
+        userDefaults.setObject(numberOfTweet, forKey: "numberOfTweet")
     }
 }
 
@@ -123,7 +239,7 @@ extension CTTopViewController: UINavigationControllerDelegate {
                 controller.sourceType = UIImagePickerControllerSourceType.Camera
             }
             
-            self.presentViewController(controller, animated: true, completion: nil)
+            presentViewController(controller, animated: true, completion: nil)
         }
     }
 }
@@ -144,11 +260,11 @@ extension CTTopViewController: UIImagePickerControllerDelegate {
             switch result {
             case SLComposeViewControllerResult.Done:
                 self.twitterPostView.removeAllImages()
+                self.userDefaultsWithAdvertisement()
             case SLComposeViewControllerResult.Cancelled:
                 self.twitterPostView.removeAllImages()
             }
         }
-        
-        self.presentViewController(twitterPostView, animated: true, completion: nil)
+        presentViewController(twitterPostView, animated: true, completion: nil)
     }
 }

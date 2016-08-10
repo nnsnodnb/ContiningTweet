@@ -3,7 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Top View Controller-->
@@ -18,11 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JQ-Ry-Zlm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2JQ-Ry-Zlm">
                                 <rect key="frame" x="98" y="255" width="125" height="58"/>
                                 <color key="backgroundColor" red="1" green="0.47614815105412345" blue="0.32261375722925389" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="2JQ-Ry-Zlm" secondAttribute="height" multiplier="125:58" id="K2v-mw-vHR"/>
+                                    <constraint firstAttribute="width" constant="125" id="Fdy-sw-IZg"/>
+                                    <constraint firstAttribute="height" constant="58" id="QOt-YC-IHB"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Tweet">
@@ -38,15 +39,72 @@
                                     <action selector="tweet:" destination="Nfa-fV-13Z" eventType="touchUpInside" id="hZX-D4-2NJ"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIl-YF-4WT" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="E1p-sB-qCk"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CCg-E1-nDV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BPP-f7-tK7" customClass="GADBannerView">
+                                <rect key="frame" x="10" y="159" width="300" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="6uX-8P-l7J"/>
+                                    <constraint firstAttribute="width" constant="300" id="8YY-dt-UUC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htm-hB-D3e">
+                                <rect key="frame" x="8" y="417" width="304" height="45"/>
+                                <color key="backgroundColor" red="0.6830729166666667" green="0.36152208804748481" blue="0.67390651570275006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="XXY-qo-Yh1"/>
+                                    <constraint firstAttribute="width" constant="304" id="tOD-wH-ly8"/>
+                                </constraints>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" red="0.97466095157623756" green="1" blue="0.99018842402213048" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="advertisementClose:" destination="Nfa-fV-13Z" eventType="touchUpInside" id="NPB-O7-d2y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.27396966425019315" green="0.27954127508461751" blue="0.30140224358974355" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2JQ-Ry-Zlm" firstAttribute="centerY" secondItem="zuP-cB-d4Y" secondAttribute="centerY" id="29l-hf-4nk"/>
-                            <constraint firstItem="2JQ-Ry-Zlm" firstAttribute="centerX" secondItem="zuP-cB-d4Y" secondAttribute="centerX" id="46Y-9D-XAG"/>
+                            <constraint firstItem="Htm-hB-D3e" firstAttribute="top" secondItem="BPP-f7-tK7" secondAttribute="bottom" constant="8" symbolic="YES" id="7h1-Pi-nWU"/>
+                            <constraint firstItem="2JQ-Ry-Zlm" firstAttribute="centerX" secondItem="zuP-cB-d4Y" secondAttribute="centerX" id="D9Q-Pe-odn"/>
+                            <constraint firstItem="BPP-f7-tK7" firstAttribute="centerX" secondItem="2JQ-Ry-Zlm" secondAttribute="centerX" id="FgD-dB-wAN"/>
+                            <constraint firstItem="fIl-YF-4WT" firstAttribute="leading" secondItem="zuP-cB-d4Y" secondAttribute="leading" id="MeE-G2-XDb"/>
+                            <constraint firstItem="BPP-f7-tK7" firstAttribute="centerY" secondItem="2JQ-Ry-Zlm" secondAttribute="centerY" id="NG0-mu-yit"/>
+                            <constraint firstItem="fIl-YF-4WT" firstAttribute="centerX" secondItem="zuP-cB-d4Y" secondAttribute="centerX" id="Vhx-gZ-Ysw"/>
+                            <constraint firstItem="fIl-YF-4WT" firstAttribute="top" secondItem="Htm-hB-D3e" secondAttribute="bottom" constant="56" id="Wvh-GV-4c3"/>
+                            <constraint firstItem="CCg-E1-nDV" firstAttribute="trailing" secondItem="fIl-YF-4WT" secondAttribute="trailing" id="eia-aS-M6l"/>
+                            <constraint firstItem="Htm-hB-D3e" firstAttribute="leading" secondItem="zuP-cB-d4Y" secondAttribute="leadingMargin" constant="-8" id="hWt-OR-JBF"/>
+                            <constraint firstItem="Htm-hB-D3e" firstAttribute="centerX" secondItem="fIl-YF-4WT" secondAttribute="centerX" id="moS-dY-90t"/>
+                            <constraint firstItem="CCg-E1-nDV" firstAttribute="leading" secondItem="fIl-YF-4WT" secondAttribute="leading" id="oHf-se-1kK"/>
+                            <constraint firstItem="2JQ-Ry-Zlm" firstAttribute="centerY" secondItem="zuP-cB-d4Y" secondAttribute="centerY" id="oS8-40-qNj"/>
+                            <constraint firstItem="VbD-26-x8y" firstAttribute="top" secondItem="fIl-YF-4WT" secondAttribute="bottom" id="pnm-cM-tcZ"/>
+                            <constraint firstItem="CCg-E1-nDV" firstAttribute="bottom" secondItem="VbD-26-x8y" secondAttribute="top" id="rmr-BB-Un9"/>
+                            <constraint firstItem="BPP-f7-tK7" firstAttribute="leading" secondItem="zuP-cB-d4Y" secondAttribute="leadingMargin" constant="-6" id="vJ2-bA-TD9"/>
+                            <constraint firstItem="CCg-E1-nDV" firstAttribute="centerY" secondItem="2JQ-Ry-Zlm" secondAttribute="centerY" id="wEL-yY-LTL"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="advertisementBackgruondView" destination="CCg-E1-nDV" id="qpX-Gt-y9r"/>
+                        <outlet property="advertisementCloseButton" destination="Htm-hB-D3e" id="67Q-Nk-Ppd"/>
+                        <outlet property="bannerView" destination="fIl-YF-4WT" id="T50-dh-MH4"/>
+                        <outlet property="popupAdvertisementView" destination="BPP-f7-tK7" id="k5G-IG-JDA"/>
                         <outlet property="tweetButton" destination="2JQ-Ry-Zlm" id="6pV-e7-5vg"/>
                     </connections>
                 </viewController>
