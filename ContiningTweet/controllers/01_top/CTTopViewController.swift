@@ -130,7 +130,12 @@ class CTTopViewController: UIViewController {
         let alert: UIAlertController = UIAlertController(title: "選択方法を選択",
                                                          message: nil,
                                                          preferredStyle: .ActionSheet)
-        
+        alert.popoverPresentationController?.sourceRect = CGRectMake(tweetButton.frame.origin.x + tweetButton.frame.size.width,
+                                                                     tweetButton.frame.origin.y + tweetButton.frame.size.height / 2 - UIApplication.sharedApplication().statusBarFrame.height / 2,
+                                                                     20,
+                                                                     20)
+        alert.popoverPresentationController?.sourceView = self.view
+      
         let onlyText = UIAlertAction(title: "テキストのみ",
                                      style: .Default) { action in
                                                 self.showTweetViewDialogWithImageTrue(.Text)
