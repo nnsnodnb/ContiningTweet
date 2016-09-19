@@ -83,12 +83,18 @@ class CTTopViewController: UIViewController {
                 self.twitterPostView.completionHandler = {(result:SLComposeViewControllerResult) -> Void in
                     switch result {
                     case SLComposeViewControllerResult.done:
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                            self.showTweetViewDialogWithImageFalse()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+                            guard let wself = self else {
+                                return
+                            }
+                            wself.showTweetViewDialogWithImageFalse()
                         }
                     case SLComposeViewControllerResult.cancelled:
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                            self.showTweetViewDialogWithImageFalse()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+                            guard let wself = self else {
+                                return
+                            }
+                            wself.showTweetViewDialogWithImageFalse()
                         }
                     }
                 }
@@ -135,20 +141,21 @@ class CTTopViewController: UIViewController {
                                                                      width: 20,
                                                                      height: 20)
         alert.popoverPresentationController?.sourceView = self.view
-      
+        
+        weak var wself = self
         let onlyText = UIAlertAction(title: "テキストのみ",
                                      style: .default) { action in
-                                                self.showTweetViewDialogWithImageTrue(.text)
+                                        wself?.showTweetViewDialogWithImageTrue(.text)
         }
         
         let cameraRollImage = UIAlertAction(title: "カメラロールから選択",
                                             style: .default) { action in
-                                                self.showTweetViewDialogWithImageTrue(.cameraRoll)
+                                                wself?.showTweetViewDialogWithImageTrue(.cameraRoll)
         }
         
         let cameraTakeImage = UIAlertAction(title: "カメラで撮影",
                                             style: .default) { action in
-                                                self.showTweetViewDialogWithImageTrue(.photo)
+                                                wself?.showTweetViewDialogWithImageTrue(.photo)
         }
         
         let cancel = UIAlertAction(title: "キャンセル",
@@ -186,20 +193,23 @@ class CTTopViewController: UIViewController {
         twitterPostView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
         switch type {
         case .text:
+            weak var wself = self
             twitterPostView.completionHandler = {(result:SLComposeViewControllerResult) -> Void in
                 switch result {
                 case SLComposeViewControllerResult.done:
-                    self.countUpNumberOfTweet()
+                    wself?.countUpNumberOfTweet()
                     DispatchQueue.main.asyncAfter(deadline: self.delayTime) {
-                        if self.userDefaults.integer(forKey: "numberOfTweet") == 5 {
-                            self.userDefaultsWithAdvertisement()
+                        if wself?.userDefaults.integer(forKey: "numberOfTweet") == 5 {
+                            wself?.userDefaultsWithAdvertisement()
                         }
                     }
                 case SLComposeViewControllerResult.cancelled:
                     break
                 }
             }
-            self.present(self.twitterPostView, animated: true, completion: nil)
+            if let postView = wself?.twitterPostView {
+                wself?.present(postView, animated: true, completion: nil)
+            }
         case .cameraRoll:
             pickImageFromLibrary(.cameraRoll)
         case .photo:
@@ -209,20 +219,25 @@ class CTTopViewController: UIViewController {
     
     fileprivate func showTweetViewDialogWithImageFalse() {
         twitterPostView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+        weak var wself = self
         twitterPostView.completionHandler = {(result:SLComposeViewControllerResult) -> Void in
             switch result {
             case SLComposeViewControllerResult.done:
                 DispatchQueue.main.asyncAfter(deadline: self.delayTime) {
-                    self.countUpNumberOfTweet()
-                    if Float(self.userDefaults.integer(forKey: "numberOfTweet")) - 0.5 > 2.5 {
-                        self.userDefaultsWithAdvertisement()
-                    } else {
-                        self.showTweetViewDialogWithImageFalse()
+                    wself?.countUpNumberOfTweet()
+                    if let numberOfTweet = wself?.userDefaults.integer(forKey: "numberOfTweet") {
+                        if Float(numberOfTweet) - 0.5 > 2.5 {
+                            wself?.userDefaultsWithAdvertisement()
+                        } else {
+                            wself?.showTweetViewDialogWithImageFalse()
+                        }
                     }
                 }
             case SLComposeViewControllerResult.cancelled:
-                DispatchQueue.main.asyncAfter(deadline: self.delayTime) {
-                    self.showTweetViewDialogWithImageFalse()
+                if let delayTime = wself?.delayTime {
+                    DispatchQueue.main.asyncAfter(deadline: delayTime) {
+                        wself?.showTweetViewDialogWithImageFalse()
+                    }
                 }
             }
         }
@@ -270,13 +285,15 @@ extension CTTopViewController: UIImagePickerControllerDelegate {
         }
         picker.dismiss(animated: true, completion: nil)
         
-        twitterPostView.completionHandler = {(result:SLComposeViewControllerResult) -> Void in
+        weak var wself = self
+        twitterPostView.completionHandler = {
+            (result:SLComposeViewControllerResult) -> Void in
             switch result {
             case SLComposeViewControllerResult.done:
-                self.twitterPostView.removeAllImages()
-                self.userDefaultsWithAdvertisement()
+                wself?.twitterPostView.removeAllImages()
+                wself?.userDefaultsWithAdvertisement()
             case SLComposeViewControllerResult.cancelled:
-                self.twitterPostView.removeAllImages()
+                wself?.twitterPostView.removeAllImages()
             }
         }
         present(twitterPostView, animated: true, completion: nil)
