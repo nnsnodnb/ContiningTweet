@@ -45,5 +45,11 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>ツイート時に追加する位置情報を使用します</string>
+	<key>NSCameraUsageDescription</key>
+	<string>ツイート時にカメラで撮影した写真を追加します</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>ツイート時にカメラロールから選択した写真を追加します</string>
 </dict>
 </plist>
