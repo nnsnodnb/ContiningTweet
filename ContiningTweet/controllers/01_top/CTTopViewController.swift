@@ -198,9 +198,11 @@ class CTTopViewController: UIViewController {
                 switch result {
                 case SLComposeViewControllerResult.done:
                     wself?.countUpNumberOfTweet()
-                    DispatchQueue.main.asyncAfter(deadline: self.delayTime) {
-                        if wself?.userDefaults.integer(forKey: "numberOfTweet") == 5 {
-                            wself?.userDefaultsWithAdvertisement()
+                    if let delayTime = wself?.delayTime {
+                        DispatchQueue.main.asyncAfter(deadline: delayTime) {
+                            if wself?.userDefaults.integer(forKey: "numberOfTweet") == 5 {
+                                wself?.userDefaultsWithAdvertisement()
+                            }
                         }
                     }
                 case SLComposeViewControllerResult.cancelled:
