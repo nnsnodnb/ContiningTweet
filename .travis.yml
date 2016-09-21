@@ -1,0 +1,15 @@
+{
+  "language": "objective-c",
+  "osx_image": "xcode8",
+  "script": [
+    "xctool -workspace ContiningTweet.xcworkspace -scheme ContiningTweet -sdk iphonesimulator -destination 'OS=10.0,name=iPhone 6s Plus' ONLY_ACTIVE_ARCH=NO"
+  ],
+  "before_install": [
+    "brew update",
+    "brew uninstall xctool && brew install --HEAD xctool",
+    "cd Example/ && pod install && cd ../"
+  ],
+  "group": "stable",
+  "dist": "osx",
+  "os": "osx"
+}
