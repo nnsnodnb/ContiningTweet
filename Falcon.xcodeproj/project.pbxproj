@@ -15,9 +15,9 @@
 		CFFB7F8A1DB503FD008B623F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7F881DB503FD008B623F /* LaunchScreen.storyboard */; };
 		CFFB7F951DB503FD008B623F /* FalconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7F941DB503FD008B623F /* FalconTests.swift */; };
 		CFFB7FA01DB503FD008B623F /* FalconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7F9F1DB503FD008B623F /* FalconUITests.swift */; };
-		CFFB7FB21DB5042F008B623F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7FB11DB5042F008B623F /* GoogleService-Info.plist */; };
 		CFFB7FB81DB505FA008B623F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFB7FB71DB505FA008B623F /* Social.framework */; };
 		CFFB7FBA1DB5061D008B623F /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7FB91DB5061D008B623F /* Top.storyboard */; };
+		CFFB7FBC1DB5093F008B623F /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7FBB1DB5093F008B623F /* TopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +54,9 @@
 		CFFB7F9B1DB503FD008B623F /* FalconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FalconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFB7F9F1DB503FD008B623F /* FalconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconUITests.swift; sourceTree = "<group>"; };
 		CFFB7FA11DB503FD008B623F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFFB7FB11DB5042F008B623F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CFFB7FB71DB505FA008B623F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		CFFB7FB91DB5061D008B623F /* Top.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
+		CFFB7FBB1DB5093F008B623F /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				CFFB7F861DB503FD008B623F /* Assets.xcassets */,
-				CFFB7FB11DB5042F008B623F /* GoogleService-Info.plist */,
 				CFFB7F8B1DB503FD008B623F /* Info.plist */,
 			);
 			path = resource;
@@ -194,6 +193,7 @@
 		CFFB7FB31DB50435008B623F /* 01_top */ = {
 			isa = PBXGroup;
 			children = (
+				CFFB7FBB1DB5093F008B623F /* TopViewController.swift */,
 			);
 			path = 01_top;
 			sourceTree = "<group>";
@@ -331,7 +331,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFFB7F8A1DB503FD008B623F /* LaunchScreen.storyboard in Resources */,
-				CFFB7FB21DB5042F008B623F /* GoogleService-Info.plist in Resources */,
 				CFFB7F871DB503FD008B623F /* Assets.xcassets in Resources */,
 				CFFB7F851DB503FD008B623F /* Main.storyboard in Resources */,
 				CFFB7FBA1DB5061D008B623F /* Top.storyboard in Resources */,
@@ -407,6 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFB7FBC1DB5093F008B623F /* TopViewController.swift in Sources */,
 				CFFB7F821DB503FD008B623F /* ViewController.swift in Sources */,
 				CFFB7F801DB503FD008B623F /* AppDelegate.swift in Sources */,
 			);
