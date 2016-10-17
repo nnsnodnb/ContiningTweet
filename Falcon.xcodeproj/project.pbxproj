@@ -1,1255 +1,665 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>053863CC09A6FCA373481C89</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CAF00DF95C258CF9122F1155</string>
-				<string>C444ACAD993C6EE849183640</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>17F7F759120EF62417025469</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Falcon/Pods-Falcon-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>1940DEC60DA151EEBE0D99E9</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>1A8FEBF6E717E94C00484A73</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Falcon.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>263C0C6276466F0571DA6C06</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Falcon/Pods-Falcon-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>784D52606D2AB45FE26F18BD</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A8FEBF6E717E94C00484A73</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>93ECF5626B5DF72A92D2979A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1A8FEBF6E717E94C00484A73</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C444ACAD993C6EE849183640</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Falcon.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Falcon/Pods-Falcon.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CAF00DF95C258CF9122F1155</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Falcon.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Falcon/Pods-Falcon.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F731DB503FD008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7F7E1DB503FD008B623F</string>
-				<string>CFFB7F931DB503FD008B623F</string>
-				<string>CFFB7F9E1DB503FD008B623F</string>
-				<string>CFFB7F7D1DB503FD008B623F</string>
-				<string>053863CC09A6FCA373481C89</string>
-				<string>784D52606D2AB45FE26F18BD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F741DB503FD008B623F</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0730</string>
-				<key>LastUpgradeCheck</key>
-				<string>0730</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>nnsnodnb.moe</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>CFFB7F7B1DB503FD008B623F</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-					</dict>
-					<key>CFFB7F8F1DB503FD008B623F</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>TestTargetID</key>
-						<string>CFFB7F7B1DB503FD008B623F</string>
-					</dict>
-					<key>CFFB7F9A1DB503FD008B623F</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>7.3.1</string>
-						<key>TestTargetID</key>
-						<string>CFFB7F7B1DB503FD008B623F</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>CFFB7F771DB503FD008B623F</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>CFFB7F731DB503FD008B623F</string>
-			<key>productRefGroup</key>
-			<string>CFFB7F7D1DB503FD008B623F</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>CFFB7F7B1DB503FD008B623F</string>
-				<string>CFFB7F8F1DB503FD008B623F</string>
-				<string>CFFB7F9A1DB503FD008B623F</string>
-			</array>
-		</dict>
-		<key>CFFB7F771DB503FD008B623F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>CFFB7FA21DB503FD008B623F</string>
-				<string>CFFB7FA31DB503FD008B623F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CFFB7F781DB503FD008B623F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CFFB7F821DB503FD008B623F</string>
-				<string>CFFB7F801DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CFFB7F791DB503FD008B623F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>93ECF5626B5DF72A92D2979A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CFFB7F7A1DB503FD008B623F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CFFB7F8A1DB503FD008B623F</string>
-				<string>CFFB7FB21DB5042F008B623F</string>
-				<string>CFFB7F871DB503FD008B623F</string>
-				<string>CFFB7F851DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CFFB7F7B1DB503FD008B623F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>CFFB7FA41DB503FD008B623F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>1940DEC60DA151EEBE0D99E9</string>
-				<string>CFFB7F781DB503FD008B623F</string>
-				<string>CFFB7F791DB503FD008B623F</string>
-				<string>CFFB7F7A1DB503FD008B623F</string>
-				<string>17F7F759120EF62417025469</string>
-				<string>263C0C6276466F0571DA6C06</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Falcon</string>
-			<key>productName</key>
-			<string>Falcon</string>
-			<key>productReference</key>
-			<string>CFFB7F7C1DB503FD008B623F</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>CFFB7F7C1DB503FD008B623F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Falcon.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CFFB7F7D1DB503FD008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7F7C1DB503FD008B623F</string>
-				<string>CFFB7F901DB503FD008B623F</string>
-				<string>CFFB7F9B1DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F7E1DB503FD008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7FAE1DB5040A008B623F</string>
-				<string>CFFB7FAF1DB50410008B623F</string>
-				<string>CFFB7FB01DB50417008B623F</string>
-				<string>CFFB7FAD1DB50405008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Falcon</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F7F1DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F801DB503FD008B623F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CFFB7F7F1DB503FD008B623F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CFFB7F811DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F821DB503FD008B623F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CFFB7F811DB503FD008B623F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CFFB7F831DB503FD008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7F841DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F841DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F851DB503FD008B623F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CFFB7F831DB503FD008B623F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CFFB7F861DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F871DB503FD008B623F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CFFB7F861DB503FD008B623F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CFFB7F881DB503FD008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7F891DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>path</key>
-			<string>.</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F891DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F8A1DB503FD008B623F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CFFB7F881DB503FD008B623F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CFFB7F8B1DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F8C1DB503FD008B623F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CFFB7F951DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CFFB7F8D1DB503FD008B623F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CFFB7F8E1DB503FD008B623F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CFFB7F8F1DB503FD008B623F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>CFFB7FA71DB503FD008B623F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>CFFB7F8C1DB503FD008B623F</string>
-				<string>CFFB7F8D1DB503FD008B623F</string>
-				<string>CFFB7F8E1DB503FD008B623F</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>CFFB7F921DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>FalconTests</string>
-			<key>productName</key>
-			<string>FalconTests</string>
-			<key>productReference</key>
-			<string>CFFB7F901DB503FD008B623F</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>CFFB7F901DB503FD008B623F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>FalconTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CFFB7F911DB503FD008B623F</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>CFFB7F741DB503FD008B623F</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>CFFB7F7B1DB503FD008B623F</string>
-			<key>remoteInfo</key>
-			<string>Falcon</string>
-		</dict>
-		<key>CFFB7F921DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>CFFB7F7B1DB503FD008B623F</string>
-			<key>targetProxy</key>
-			<string>CFFB7F911DB503FD008B623F</string>
-		</dict>
-		<key>CFFB7F931DB503FD008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7F941DB503FD008B623F</string>
-				<string>CFFB7F961DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>FalconTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F941DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>FalconTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F951DB503FD008B623F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CFFB7F941DB503FD008B623F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CFFB7F961DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F971DB503FD008B623F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>CFFB7FA01DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CFFB7F981DB503FD008B623F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CFFB7F991DB503FD008B623F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CFFB7F9A1DB503FD008B623F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>CFFB7FAA1DB503FD008B623F</string>
-			<key>buildPhases</key>
-			<array>
-				<string>CFFB7F971DB503FD008B623F</string>
-				<string>CFFB7F981DB503FD008B623F</string>
-				<string>CFFB7F991DB503FD008B623F</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>CFFB7F9D1DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>FalconUITests</string>
-			<key>productName</key>
-			<string>FalconUITests</string>
-			<key>productReference</key>
-			<string>CFFB7F9B1DB503FD008B623F</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>CFFB7F9B1DB503FD008B623F</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>FalconUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CFFB7F9C1DB503FD008B623F</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>CFFB7F741DB503FD008B623F</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>CFFB7F7B1DB503FD008B623F</string>
-			<key>remoteInfo</key>
-			<string>Falcon</string>
-		</dict>
-		<key>CFFB7F9D1DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>CFFB7F7B1DB503FD008B623F</string>
-			<key>targetProxy</key>
-			<string>CFFB7F9C1DB503FD008B623F</string>
-		</dict>
-		<key>CFFB7F9E1DB503FD008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7F9F1DB503FD008B623F</string>
-				<string>CFFB7FA11DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>FalconUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7F9F1DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>FalconUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7FA01DB503FD008B623F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CFFB7F9F1DB503FD008B623F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CFFB7FA11DB503FD008B623F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7FA21DB503FD008B623F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CFFB7FA31DB503FD008B623F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>9.3</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CFFB7FA41DB503FD008B623F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>CFFB7FA51DB503FD008B623F</string>
-				<string>CFFB7FA61DB503FD008B623F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CFFB7FA51DB503FD008B623F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>CAF00DF95C258CF9122F1155</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Falcon/resource/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>moe.nnsnodnb.Falcon</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CFFB7FA61DB503FD008B623F</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C444ACAD993C6EE849183640</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Falcon/resource/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>moe.nnsnodnb.Falcon</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CFFB7FA71DB503FD008B623F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>CFFB7FA81DB503FD008B623F</string>
-				<string>CFFB7FA91DB503FD008B623F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CFFB7FA81DB503FD008B623F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>FalconTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>moe.nnsnodnb.FalconTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Falcon.app/Falcon</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CFFB7FA91DB503FD008B623F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>INFOPLIST_FILE</key>
-				<string>FalconTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>moe.nnsnodnb.FalconTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Falcon.app/Falcon</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CFFB7FAA1DB503FD008B623F</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>CFFB7FAB1DB503FD008B623F</string>
-				<string>CFFB7FAC1DB503FD008B623F</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>CFFB7FAB1DB503FD008B623F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>FalconUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>moe.nnsnodnb.FalconUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>Falcon</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CFFB7FAC1DB503FD008B623F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>INFOPLIST_FILE</key>
-				<string>FalconUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>moe.nnsnodnb.FalconUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>Falcon</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>CFFB7FAD1DB50405008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7FB61DB50447008B623F</string>
-				<string>CFFB7FB51DB50440008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>views</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7FAE1DB5040A008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7FB41DB5043A008B623F</string>
-				<string>CFFB7FB31DB50435008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>controllers</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7FAF1DB50410008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7F7F1DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>delegate</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7FB01DB50417008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7F861DB503FD008B623F</string>
-				<string>CFFB7FB11DB5042F008B623F</string>
-				<string>CFFB7F8B1DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>resource</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7FB11DB5042F008B623F</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>GoogleService-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7FB21DB5042F008B623F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CFFB7FB11DB5042F008B623F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>CFFB7FB31DB50435008B623F</key>
-		<dict>
-			<key>children</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>01_top</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7FB41DB5043A008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7F811DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>00_base</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7FB51DB50440008B623F</key>
-		<dict>
-			<key>children</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>01_top</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CFFB7FB61DB50447008B623F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CFFB7F881DB503FD008B623F</string>
-				<string>CFFB7F831DB503FD008B623F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>00_base</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>CFFB7F741DB503FD008B623F</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93ECF5626B5DF72A92D2979A /* Pods_Falcon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8FEBF6E717E94C00484A73 /* Pods_Falcon.framework */; };
+		CFFB7F801DB503FD008B623F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7F7F1DB503FD008B623F /* AppDelegate.swift */; };
+		CFFB7F821DB503FD008B623F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7F811DB503FD008B623F /* ViewController.swift */; };
+		CFFB7F851DB503FD008B623F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7F831DB503FD008B623F /* Main.storyboard */; };
+		CFFB7F871DB503FD008B623F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7F861DB503FD008B623F /* Assets.xcassets */; };
+		CFFB7F8A1DB503FD008B623F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7F881DB503FD008B623F /* LaunchScreen.storyboard */; };
+		CFFB7F951DB503FD008B623F /* FalconTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7F941DB503FD008B623F /* FalconTests.swift */; };
+		CFFB7FA01DB503FD008B623F /* FalconUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7F9F1DB503FD008B623F /* FalconUITests.swift */; };
+		CFFB7FB21DB5042F008B623F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7FB11DB5042F008B623F /* GoogleService-Info.plist */; };
+		CFFB7FB81DB505FA008B623F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFB7FB71DB505FA008B623F /* Social.framework */; };
+		CFFB7FBA1DB5061D008B623F /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7FB91DB5061D008B623F /* Top.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFFB7F911DB503FD008B623F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFFB7F741DB503FD008B623F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFFB7F7B1DB503FD008B623F;
+			remoteInfo = Falcon;
+		};
+		CFFB7F9C1DB503FD008B623F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFFB7F741DB503FD008B623F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFFB7F7B1DB503FD008B623F;
+			remoteInfo = Falcon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A8FEBF6E717E94C00484A73 /* Pods_Falcon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Falcon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C444ACAD993C6EE849183640 /* Pods-Falcon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Falcon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Falcon/Pods-Falcon.release.xcconfig"; sourceTree = "<group>"; };
+		CAF00DF95C258CF9122F1155 /* Pods-Falcon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Falcon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Falcon/Pods-Falcon.debug.xcconfig"; sourceTree = "<group>"; };
+		CFFB7F7C1DB503FD008B623F /* Falcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Falcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFB7F7F1DB503FD008B623F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFFB7F811DB503FD008B623F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CFFB7F841DB503FD008B623F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CFFB7F861DB503FD008B623F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFFB7F891DB503FD008B623F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CFFB7F8B1DB503FD008B623F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFB7F901DB503FD008B623F /* FalconTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FalconTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFB7F941DB503FD008B623F /* FalconTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconTests.swift; sourceTree = "<group>"; };
+		CFFB7F961DB503FD008B623F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFB7F9B1DB503FD008B623F /* FalconUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FalconUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFFB7F9F1DB503FD008B623F /* FalconUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FalconUITests.swift; sourceTree = "<group>"; };
+		CFFB7FA11DB503FD008B623F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFB7FB11DB5042F008B623F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CFFB7FB71DB505FA008B623F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CFFB7FB91DB5061D008B623F /* Top.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFFB7F791DB503FD008B623F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFB7FB81DB505FA008B623F /* Social.framework in Frameworks */,
+				93ECF5626B5DF72A92D2979A /* Pods_Falcon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFB7F8D1DB503FD008B623F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFB7F981DB503FD008B623F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		053863CC09A6FCA373481C89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CAF00DF95C258CF9122F1155 /* Pods-Falcon.debug.xcconfig */,
+				C444ACAD993C6EE849183640 /* Pods-Falcon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		784D52606D2AB45FE26F18BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7FB71DB505FA008B623F /* Social.framework */,
+				1A8FEBF6E717E94C00484A73 /* Pods_Falcon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFFB7F731DB503FD008B623F = {
+			isa = PBXGroup;
+			children = (
+				CFFB7F7E1DB503FD008B623F /* Falcon */,
+				CFFB7F931DB503FD008B623F /* FalconTests */,
+				CFFB7F9E1DB503FD008B623F /* FalconUITests */,
+				CFFB7F7D1DB503FD008B623F /* Products */,
+				053863CC09A6FCA373481C89 /* Pods */,
+				784D52606D2AB45FE26F18BD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CFFB7F7D1DB503FD008B623F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7F7C1DB503FD008B623F /* Falcon.app */,
+				CFFB7F901DB503FD008B623F /* FalconTests.xctest */,
+				CFFB7F9B1DB503FD008B623F /* FalconUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFFB7F7E1DB503FD008B623F /* Falcon */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7FAE1DB5040A008B623F /* controllers */,
+				CFFB7FAF1DB50410008B623F /* delegate */,
+				CFFB7FB01DB50417008B623F /* resource */,
+				CFFB7FAD1DB50405008B623F /* views */,
+			);
+			path = Falcon;
+			sourceTree = "<group>";
+		};
+		CFFB7F931DB503FD008B623F /* FalconTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7F941DB503FD008B623F /* FalconTests.swift */,
+				CFFB7F961DB503FD008B623F /* Info.plist */,
+			);
+			path = FalconTests;
+			sourceTree = "<group>";
+		};
+		CFFB7F9E1DB503FD008B623F /* FalconUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7F9F1DB503FD008B623F /* FalconUITests.swift */,
+				CFFB7FA11DB503FD008B623F /* Info.plist */,
+			);
+			path = FalconUITests;
+			sourceTree = "<group>";
+		};
+		CFFB7FAD1DB50405008B623F /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7FB61DB50447008B623F /* 00_base */,
+				CFFB7FB51DB50440008B623F /* 01_top */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		CFFB7FAE1DB5040A008B623F /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7FB41DB5043A008B623F /* 00_base */,
+				CFFB7FB31DB50435008B623F /* 01_top */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		CFFB7FAF1DB50410008B623F /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7F7F1DB503FD008B623F /* AppDelegate.swift */,
+			);
+			path = delegate;
+			sourceTree = "<group>";
+		};
+		CFFB7FB01DB50417008B623F /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7F861DB503FD008B623F /* Assets.xcassets */,
+				CFFB7FB11DB5042F008B623F /* GoogleService-Info.plist */,
+				CFFB7F8B1DB503FD008B623F /* Info.plist */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		CFFB7FB31DB50435008B623F /* 01_top */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 01_top;
+			sourceTree = "<group>";
+		};
+		CFFB7FB41DB5043A008B623F /* 00_base */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7F811DB503FD008B623F /* ViewController.swift */,
+			);
+			path = 00_base;
+			sourceTree = "<group>";
+		};
+		CFFB7FB51DB50440008B623F /* 01_top */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7FB91DB5061D008B623F /* Top.storyboard */,
+			);
+			path = 01_top;
+			sourceTree = "<group>";
+		};
+		CFFB7FB61DB50447008B623F /* 00_base */ = {
+			isa = PBXGroup;
+			children = (
+				CFFB7F881DB503FD008B623F /* LaunchScreen.storyboard */,
+				CFFB7F831DB503FD008B623F /* Main.storyboard */,
+			);
+			path = 00_base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFFB7F7B1DB503FD008B623F /* Falcon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFFB7FA41DB503FD008B623F /* Build configuration list for PBXNativeTarget "Falcon" */;
+			buildPhases = (
+				1940DEC60DA151EEBE0D99E9 /* Check Pods Manifest.lock */,
+				CFFB7F781DB503FD008B623F /* Sources */,
+				CFFB7F791DB503FD008B623F /* Frameworks */,
+				CFFB7F7A1DB503FD008B623F /* Resources */,
+				17F7F759120EF62417025469 /* Embed Pods Frameworks */,
+				263C0C6276466F0571DA6C06 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Falcon;
+			productName = Falcon;
+			productReference = CFFB7F7C1DB503FD008B623F /* Falcon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFFB7F8F1DB503FD008B623F /* FalconTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFFB7FA71DB503FD008B623F /* Build configuration list for PBXNativeTarget "FalconTests" */;
+			buildPhases = (
+				CFFB7F8C1DB503FD008B623F /* Sources */,
+				CFFB7F8D1DB503FD008B623F /* Frameworks */,
+				CFFB7F8E1DB503FD008B623F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFFB7F921DB503FD008B623F /* PBXTargetDependency */,
+			);
+			name = FalconTests;
+			productName = FalconTests;
+			productReference = CFFB7F901DB503FD008B623F /* FalconTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CFFB7F9A1DB503FD008B623F /* FalconUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFFB7FAA1DB503FD008B623F /* Build configuration list for PBXNativeTarget "FalconUITests" */;
+			buildPhases = (
+				CFFB7F971DB503FD008B623F /* Sources */,
+				CFFB7F981DB503FD008B623F /* Frameworks */,
+				CFFB7F991DB503FD008B623F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFFB7F9D1DB503FD008B623F /* PBXTargetDependency */,
+			);
+			name = FalconUITests;
+			productName = FalconUITests;
+			productReference = CFFB7F9B1DB503FD008B623F /* FalconUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFFB7F741DB503FD008B623F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = nnsnodnb.moe;
+				TargetAttributes = {
+					CFFB7F7B1DB503FD008B623F = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					CFFB7F8F1DB503FD008B623F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CFFB7F7B1DB503FD008B623F;
+					};
+					CFFB7F9A1DB503FD008B623F = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = CFFB7F7B1DB503FD008B623F;
+					};
+				};
+			};
+			buildConfigurationList = CFFB7F771DB503FD008B623F /* Build configuration list for PBXProject "Falcon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFFB7F731DB503FD008B623F;
+			productRefGroup = CFFB7F7D1DB503FD008B623F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFFB7F7B1DB503FD008B623F /* Falcon */,
+				CFFB7F8F1DB503FD008B623F /* FalconTests */,
+				CFFB7F9A1DB503FD008B623F /* FalconUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFFB7F7A1DB503FD008B623F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFB7F8A1DB503FD008B623F /* LaunchScreen.storyboard in Resources */,
+				CFFB7FB21DB5042F008B623F /* GoogleService-Info.plist in Resources */,
+				CFFB7F871DB503FD008B623F /* Assets.xcassets in Resources */,
+				CFFB7F851DB503FD008B623F /* Main.storyboard in Resources */,
+				CFFB7FBA1DB5061D008B623F /* Top.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFB7F8E1DB503FD008B623F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFB7F991DB503FD008B623F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17F7F759120EF62417025469 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Falcon/Pods-Falcon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1940DEC60DA151EEBE0D99E9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		263C0C6276466F0571DA6C06 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Falcon/Pods-Falcon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFFB7F781DB503FD008B623F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFB7F821DB503FD008B623F /* ViewController.swift in Sources */,
+				CFFB7F801DB503FD008B623F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFB7F8C1DB503FD008B623F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFB7F951DB503FD008B623F /* FalconTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFFB7F971DB503FD008B623F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFFB7FA01DB503FD008B623F /* FalconUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFFB7F921DB503FD008B623F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFFB7F7B1DB503FD008B623F /* Falcon */;
+			targetProxy = CFFB7F911DB503FD008B623F /* PBXContainerItemProxy */;
+		};
+		CFFB7F9D1DB503FD008B623F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFFB7F7B1DB503FD008B623F /* Falcon */;
+			targetProxy = CFFB7F9C1DB503FD008B623F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CFFB7F831DB503FD008B623F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFFB7F841DB503FD008B623F /* Base */,
+			);
+			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		CFFB7F881DB503FD008B623F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFFB7F891DB503FD008B623F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFFB7FA21DB503FD008B623F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CFFB7FA31DB503FD008B623F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CFFB7FA51DB503FD008B623F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAF00DF95C258CF9122F1155 /* Pods-Falcon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Falcon/resource/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.Falcon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CFFB7FA61DB503FD008B623F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C444ACAD993C6EE849183640 /* Pods-Falcon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Falcon/resource/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.Falcon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CFFB7FA81DB503FD008B623F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FalconTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.FalconTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Falcon.app/Falcon";
+			};
+			name = Debug;
+		};
+		CFFB7FA91DB503FD008B623F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FalconTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.FalconTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Falcon.app/Falcon";
+			};
+			name = Release;
+		};
+		CFFB7FAB1DB503FD008B623F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FalconUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.FalconUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Falcon;
+			};
+			name = Debug;
+		};
+		CFFB7FAC1DB503FD008B623F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FalconUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.FalconUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Falcon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFFB7F771DB503FD008B623F /* Build configuration list for PBXProject "Falcon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFB7FA21DB503FD008B623F /* Debug */,
+				CFFB7FA31DB503FD008B623F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFFB7FA41DB503FD008B623F /* Build configuration list for PBXNativeTarget "Falcon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFB7FA51DB503FD008B623F /* Debug */,
+				CFFB7FA61DB503FD008B623F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFFB7FA71DB503FD008B623F /* Build configuration list for PBXNativeTarget "FalconTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFB7FA81DB503FD008B623F /* Debug */,
+				CFFB7FA91DB503FD008B623F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFFB7FAA1DB503FD008B623F /* Build configuration list for PBXNativeTarget "FalconUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFB7FAB1DB503FD008B623F /* Debug */,
+				CFFB7FAC1DB503FD008B623F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFFB7F741DB503FD008B623F /* Project object */;
+}
