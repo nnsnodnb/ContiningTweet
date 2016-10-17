@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		93ECF5626B5DF72A92D2979A /* Pods_Falcon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8FEBF6E717E94C00484A73 /* Pods_Falcon.framework */; };
+		CFBD0BDF1DB51BFE00DE8F52 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBD0BDE1DB51BFE00DE8F52 /* PopupViewController.swift */; };
 		CFFB7F801DB503FD008B623F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7F7F1DB503FD008B623F /* AppDelegate.swift */; };
 		CFFB7F821DB503FD008B623F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7F811DB503FD008B623F /* ViewController.swift */; };
 		CFFB7F851DB503FD008B623F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7F831DB503FD008B623F /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 		CFFB7FB81DB505FA008B623F /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFB7FB71DB505FA008B623F /* Social.framework */; };
 		CFFB7FBA1DB5061D008B623F /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7FB91DB5061D008B623F /* Top.storyboard */; };
 		CFFB7FBC1DB5093F008B623F /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7FBB1DB5093F008B623F /* TopViewController.swift */; };
+		CFFB7FBE1DB51B4C008B623F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7FBD1DB51B4C008B623F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 		1A8FEBF6E717E94C00484A73 /* Pods_Falcon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Falcon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C444ACAD993C6EE849183640 /* Pods-Falcon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Falcon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Falcon/Pods-Falcon.release.xcconfig"; sourceTree = "<group>"; };
 		CAF00DF95C258CF9122F1155 /* Pods-Falcon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Falcon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Falcon/Pods-Falcon.debug.xcconfig"; sourceTree = "<group>"; };
+		CFBD0BDE1DB51BFE00DE8F52 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		CFFB7F7C1DB503FD008B623F /* Falcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Falcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFB7F7F1DB503FD008B623F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFFB7F811DB503FD008B623F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +60,7 @@
 		CFFB7FB71DB505FA008B623F /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		CFFB7FB91DB5061D008B623F /* Top.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
 		CFFB7FBB1DB5093F008B623F /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		CFFB7FBD1DB51B4C008B623F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 			children = (
 				CFFB7F861DB503FD008B623F /* Assets.xcassets */,
 				CFFB7F8B1DB503FD008B623F /* Info.plist */,
+				CFFB7FBD1DB51B4C008B623F /* GoogleService-Info.plist */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				CFFB7FBB1DB5093F008B623F /* TopViewController.swift */,
+				CFBD0BDE1DB51BFE00DE8F52 /* PopupViewController.swift */,
 			);
 			path = 01_top;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 			files = (
 				CFFB7F8A1DB503FD008B623F /* LaunchScreen.storyboard in Resources */,
 				CFFB7F871DB503FD008B623F /* Assets.xcassets in Resources */,
+				CFFB7FBE1DB51B4C008B623F /* GoogleService-Info.plist in Resources */,
 				CFFB7F851DB503FD008B623F /* Main.storyboard in Resources */,
 				CFFB7FBA1DB5061D008B623F /* Top.storyboard in Resources */,
 			);
@@ -409,6 +416,7 @@
 				CFFB7FBC1DB5093F008B623F /* TopViewController.swift in Sources */,
 				CFFB7F821DB503FD008B623F /* ViewController.swift in Sources */,
 				CFFB7F801DB503FD008B623F /* AppDelegate.swift in Sources */,
+				CFBD0BDF1DB51BFE00DE8F52 /* PopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +565,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Falcon/resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.Falcon;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.ContiningTweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -569,7 +577,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Falcon/resource/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.Falcon;
+				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.ContiningTweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

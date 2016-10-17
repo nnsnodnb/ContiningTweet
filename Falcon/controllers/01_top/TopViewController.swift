@@ -46,45 +46,45 @@ class TopViewController: UIViewController {
         firebaseSetup()
         advertisementSetup()
         outletSetup()
-        tweetButton.hidden = true
+//        tweetButton.hidden = true
         userDefaults.setInteger(0, forKey: "numberOfTweet")
     }
     
     private func bannerSetup() {
-//        bannerView.adUnitID = adUnitID
-//        bannerView.rootViewController = self
-//        bannerView.loadRequest(GADRequest())
+        bannerView.adUnitID = adUnitID
+        bannerView.rootViewController = self
+        bannerView.loadRequest(GADRequest())
         offPopupAdvertisementView()
     }
     
     private func splashSetup() {
-        twitterPostView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-        if !self.userDefaults.boolForKey("enabled_preference") {
-            // Only Text
-            self.twitterPostView.completionHandler = { [weak self] (result:SLComposeViewControllerResult) -> Void in
-                switch result {
-                case SLComposeViewControllerResult.Done:
-                    guard let wself = self else {
-                        return
-                    }
-                    dispatch_after(wself.delay, dispatch_get_main_queue(), {
-                        wself.showTweetViewDialogWithImageFalse()
-                    })
-                case SLComposeViewControllerResult.Cancelled:
-                    guard let wself = self else {
-                        return
-                    }
-                    dispatch_after(wself.delay, dispatch_get_main_queue(), {
-                        wself.showTweetViewDialogWithImageFalse()
-                    })
-                }
-            }
-            bannerView.hidden = true
-            presentViewController(twitterPostView, animated: true, completion: nil)
-        } else {
-            // Enable With Image
-            tweetButton.hidden = false
-        }
+//        twitterPostView = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+//        if !self.userDefaults.boolForKey("enabled_preference") {
+//            // Only Text
+//            self.twitterPostView.completionHandler = { [weak self] (result:SLComposeViewControllerResult) -> Void in
+//                switch result {
+//                case SLComposeViewControllerResult.Done:
+//                    guard let wself = self else {
+//                        return
+//                    }
+//                    dispatch_after(wself.delay, dispatch_get_main_queue(), {
+//                        wself.showTweetViewDialogWithImageFalse()
+//                    })
+//                case SLComposeViewControllerResult.Cancelled:
+//                    guard let wself = self else {
+//                        return
+//                    }
+//                    dispatch_after(wself.delay, dispatch_get_main_queue(), {
+//                        wself.showTweetViewDialogWithImageFalse()
+//                    })
+//                }
+//            }
+//            bannerView.hidden = true
+//            presentViewController(twitterPostView, animated: true, completion: nil)
+//        } else {
+//            // Enable With Image
+//            tweetButton.hidden = false
+//        }
     }
     
     private func firebaseSetup() {
@@ -104,8 +104,8 @@ class TopViewController: UIViewController {
     }
     
     private func outletSetup() {
-        tweetButton.exclusiveTouch = true
-        bannerView.exclusiveTouch = true
+//        tweetButton.exclusiveTouch = true
+//        bannerView.exclusiveTouch = true
         
     }
 

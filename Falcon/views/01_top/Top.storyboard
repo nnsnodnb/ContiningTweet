@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Top View Controller-->
@@ -19,21 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iL2-Sd-Y1B" customClass="GADBannerView">
-                                <rect key="frame" x="-8" y="519" width="336" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="508" width="320" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="kMW-2f-Dzm"/>
-                                    <constraint firstAttribute="width" constant="336" id="trk-nC-qlV"/>
+                                    <constraint firstAttribute="height" constant="60" id="8YM-c1-3fn"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8E-3b-0GZ">
-                                <rect key="frame" x="96" y="259" width="129" height="50"/>
+                                <rect key="frame" x="85" y="254" width="150" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.57179646407859952" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="129" id="HUr-zP-y8r"/>
-                                    <constraint firstAttribute="height" constant="50" id="U6U-zv-53r"/>
+                                    <constraint firstAttribute="height" constant="60" id="HzF-1q-IhU"/>
+                                    <constraint firstAttribute="width" constant="150" id="Qo0-Op-afm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Tweet">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -50,12 +48,11 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="K8E-3b-0GZ" firstAttribute="centerX" secondItem="S4a-sM-noS" secondAttribute="centerX" id="BvD-Ay-m1I"/>
-                            <constraint firstItem="K8E-3b-0GZ" firstAttribute="centerY" secondItem="S4a-sM-noS" secondAttribute="centerY" id="Gx8-pq-Cpw"/>
-                            <constraint firstItem="iL2-Sd-Y1B" firstAttribute="leading" secondItem="S4a-sM-noS" secondAttribute="leadingMargin" constant="-24" id="Opc-a7-q0b"/>
-                            <constraint firstItem="tak-0f-TNv" firstAttribute="top" secondItem="iL2-Sd-Y1B" secondAttribute="bottom" constant="-1" id="VtV-Ae-DRF"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="iL2-Sd-Y1B" secondAttribute="trailing" constant="-24" id="ouG-Af-ZaF"/>
-                            <constraint firstItem="iL2-Sd-Y1B" firstAttribute="top" secondItem="S4a-sM-noS" secondAttribute="top" constant="519" id="tne-Fe-RdK"/>
+                            <constraint firstItem="K8E-3b-0GZ" firstAttribute="centerX" secondItem="S4a-sM-noS" secondAttribute="centerX" id="2A0-DT-66d"/>
+                            <constraint firstAttribute="trailing" secondItem="iL2-Sd-Y1B" secondAttribute="trailing" id="3Ea-eX-2yx"/>
+                            <constraint firstItem="iL2-Sd-Y1B" firstAttribute="leading" secondItem="S4a-sM-noS" secondAttribute="leading" id="FKN-NQ-Cmd"/>
+                            <constraint firstItem="iL2-Sd-Y1B" firstAttribute="bottom" secondItem="tak-0f-TNv" secondAttribute="top" id="a3L-Dc-czL"/>
+                            <constraint firstItem="K8E-3b-0GZ" firstAttribute="centerY" secondItem="S4a-sM-noS" secondAttribute="centerY" id="pmc-92-PPk"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -67,6 +64,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGt-KF-FGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="238" y="322"/>
+        </scene>
+        <!--Popup View Controller-->
+        <scene sceneID="crN-0g-rfc">
+            <objects>
+                <viewController storyboardIdentifier="PopupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xj0-ri-3Yn" customClass="PopupViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9re-Ms-bxq"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Rb-0B-Jjw"/>
+                    </layoutGuides>
+                    <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="HQa-CD-y5X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Tk-b9-oFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="632" y="322"/>
         </scene>
     </scenes>
 </document>
