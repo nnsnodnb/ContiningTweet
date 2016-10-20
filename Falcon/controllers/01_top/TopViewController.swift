@@ -48,6 +48,7 @@ class TopViewController: UIViewController {
         outletSetup()
 //        tweetButton.hidden = true
         userDefaults.setInteger(0, forKey: "numberOfTweet")
+        userDefaults.synchronize()
     }
     
     private func bannerSetup() {
@@ -100,6 +101,7 @@ class TopViewController: UIViewController {
         if !userDefaults.boolForKey("isFirstLaunch") {
             userDefaults.setBool(true, forKey: "isFirstLaunch")
             userDefaults.setInteger(0, forKey: "numberOfTweet")
+            userDefaults.synchronize()
         }
     }
     
@@ -155,8 +157,7 @@ class TopViewController: UIViewController {
             case .Done:
                 dispatch_after(wself.delay, dispatch_get_main_queue(), {
                     wself.countUpNumberOfTweet()
-                    let numberOfTweet = wself.userDefaults.integerForKey("numberOfTweet")
-                    if Float(numberOfTweet) - 0.5 > 2.5 {
+                    if wself.userDefaults.integerForKey("numberOfTweet") == 5 {
                         wself.userDefaultsWithAdvertisement()
                     } else {
                         wself.showTweetViewDialogWithImageFalse()
@@ -173,12 +174,14 @@ class TopViewController: UIViewController {
     
     private func userDefaultsWithAdvertisement() {
         userDefaults.setInteger(0, forKey: "numberOfTweet")
+        userDefaults.synchronize()
         onPopupAdvertisementView()
     }
     
     private func countUpNumberOfTweet() {
         let numberOfTweet = userDefaults.integerForKey("numberOfTweet") + 1
         userDefaults.setInteger(numberOfTweet, forKey: "numberOfTweet")
+        userDefaults.synchronize()
     }
     
     // MARK: - IBAction
