@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		93ECF5626B5DF72A92D2979A /* Pods_Falcon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8FEBF6E717E94C00484A73 /* Pods_Falcon.framework */; };
 		CFBD0BDF1DB51BFE00DE8F52 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFBD0BDE1DB51BFE00DE8F52 /* PopupViewController.swift */; };
+		CFD675641DBB6DC700C7C2BB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CFD675631DBB6DC700C7C2BB /* Settings.bundle */; };
 		CFFB7F801DB503FD008B623F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7F7F1DB503FD008B623F /* AppDelegate.swift */; };
 		CFFB7F821DB503FD008B623F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7F811DB503FD008B623F /* ViewController.swift */; };
 		CFFB7F851DB503FD008B623F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7F831DB503FD008B623F /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		C444ACAD993C6EE849183640 /* Pods-Falcon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Falcon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Falcon/Pods-Falcon.release.xcconfig"; sourceTree = "<group>"; };
 		CAF00DF95C258CF9122F1155 /* Pods-Falcon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Falcon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Falcon/Pods-Falcon.debug.xcconfig"; sourceTree = "<group>"; };
 		CFBD0BDE1DB51BFE00DE8F52 /* PopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		CFD675631DBB6DC700C7C2BB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		CFFB7F7C1DB503FD008B623F /* Falcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Falcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFFB7F7F1DB503FD008B623F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFFB7F811DB503FD008B623F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				CFFB7F861DB503FD008B623F /* Assets.xcassets */,
 				CFFB7F8B1DB503FD008B623F /* Info.plist */,
 				CFFB7FBD1DB51B4C008B623F /* GoogleService-Info.plist */,
+				CFD675631DBB6DC700C7C2BB /* Settings.bundle */,
 			);
 			path = resource;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				CFFB7F871DB503FD008B623F /* Assets.xcassets in Resources */,
 				CFFB7FBE1DB51B4C008B623F /* GoogleService-Info.plist in Resources */,
 				CFFB7F851DB503FD008B623F /* Main.storyboard in Resources */,
+				CFD675641DBB6DC700C7C2BB /* Settings.bundle in Resources */,
 				CFFB7FBA1DB5061D008B623F /* Top.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

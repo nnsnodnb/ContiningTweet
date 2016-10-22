@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Top View Controller-->
@@ -68,21 +69,66 @@
         <!--Popup View Controller-->
         <scene sceneID="crN-0g-rfc">
             <objects>
-                <viewController storyboardIdentifier="PopupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xj0-ri-3Yn" customClass="PopupViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xj0-ri-3Yn" customClass="PopupViewController" customModule="Falcon" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9re-Ms-bxq"/>
                         <viewControllerLayoutGuide type="bottom" id="0Rb-0B-Jjw"/>
                     </layoutGuides>
-                    <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="HQa-CD-y5X">
+                    <view key="view" contentMode="scaleToFill" id="HQa-CD-y5X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3H-53-6oo">
+                                <rect key="frame" x="40" y="397" width="240" height="35"/>
+                                <color key="backgroundColor" red="0.9092825834868854" green="0.28749388963543987" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8d1-pl-dFC"/>
+                                    <constraint firstAttribute="height" constant="35" id="GIG-qb-nfd"/>
+                                </constraints>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismissPopupView:" destination="xj0-ri-3Yn" eventType="touchUpInside" id="zuF-MB-PRj"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snl-km-WU1" customClass="GADBannerView">
+                                <rect key="frame" x="40" y="149" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="1JZ-8S-uCE"/>
+                                    <constraint firstAttribute="height" constant="240" id="okT-n7-hXp"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="adUnitID" value="ca-app-pub-3417597686353524/5064687299"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autoloadEnabled" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="snl-km-WU1" firstAttribute="leading" secondItem="P3H-53-6oo" secondAttribute="leading" id="4Lg-8z-BbP"/>
+                            <constraint firstItem="snl-km-WU1" firstAttribute="top" secondItem="9re-Ms-bxq" secondAttribute="bottom" constant="129" id="8Qh-zD-Mvk"/>
+                            <constraint firstItem="snl-km-WU1" firstAttribute="trailing" secondItem="P3H-53-6oo" secondAttribute="trailing" id="BEe-kw-xKU"/>
+                            <constraint firstItem="P3H-53-6oo" firstAttribute="top" secondItem="snl-km-WU1" secondAttribute="bottom" constant="8" symbolic="YES" id="EgV-Kb-gbU"/>
+                            <constraint firstItem="snl-km-WU1" firstAttribute="centerX" secondItem="HQa-CD-y5X" secondAttribute="centerX" id="OsL-0P-XSq"/>
+                            <constraint firstItem="snl-km-WU1" firstAttribute="leading" secondItem="HQa-CD-y5X" secondAttribute="leadingMargin" constant="24" id="he9-3f-tCR"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bannerView" destination="snl-km-WU1" id="3a1-ju-ojT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Tk-b9-oFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="632" y="322"/>
+            <point key="canvasLocation" x="630" y="322"/>
         </scene>
     </scenes>
 </document>

@@ -34,6 +34,10 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>カメラロールから選択した画像をツイートに使用します。</string>
+	<key>NSCameraUsageDescription</key>
+	<string>カメラで撮影した画像をツイートに使用します。</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
