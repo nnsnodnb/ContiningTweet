@@ -18,7 +18,7 @@ CONFIGURATION=Debug
 # PROVISIONING_NAME=iOS_Team_Provisioning_Profile_moennsnodnbfalcon
 PROVISIONING_NAME=FalconAdHoc1208
 IPA_FILE_NAME=develop-${BUILD_NUMBER}.ipa
-iOS_SDK=iphoneos10.0
+iOS_SDK=iphoneos10.1
 
 ## DeployGate Configuration
 #DG_USER=nnsnodnb
