@@ -1,0 +1,6 @@
+framework module Pods_FalconUITests {
+  umbrella header "Pods-FalconUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
