@@ -20,21 +20,21 @@ class PopupViewController: UIViewController {
         setup()
     }
 
-    private func setup() {
+    fileprivate func setup() {
         bannerSetup()
     }
     
-    private func bannerSetup() {
+    fileprivate func bannerSetup() {
         bannerView.adUnitID = adUnitID
         bannerView.rootViewController = self
-        bannerView.loadRequest(GADRequest())
+        bannerView.load(GADRequest())
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func dismissPopupView(sender: AnyObject) {
-        dismissViewControllerAnimated(false, completion: nil)
+    @IBAction func dismissPopupView(_ sender: AnyObject) {
+        dismiss(animated: false, completion: nil)
     }
 }
