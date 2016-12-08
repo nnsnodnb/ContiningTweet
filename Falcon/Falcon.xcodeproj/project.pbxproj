@@ -22,6 +22,7 @@
 		CFFB7FBA1DB5061D008B623F /* Top.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7FB91DB5061D008B623F /* Top.storyboard */; };
 		CFFB7FBC1DB5093F008B623F /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFB7FBB1DB5093F008B623F /* TopViewController.swift */; };
 		CFFB7FBE1DB51B4C008B623F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CFFB7FBD1DB51B4C008B623F /* GoogleService-Info.plist */; };
+		CFFEE0DE1DF9E35E00CB172E /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFFEE0DD1DF9E35E00CB172E /* GoogleToolboxForMac.framework */; };
 		ECED03F19FF5A35D6B9C1ADD /* Pods_Falcon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A8FEBF6E717E94C00484A73 /* Pods_Falcon.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		CFFB7FB91DB5061D008B623F /* Top.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Top.storyboard; sourceTree = "<group>"; };
 		CFFB7FBB1DB5093F008B623F /* TopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		CFFB7FBD1DB51B4C008B623F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CFFEE0DD1DF9E35E00CB172E /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "Pods/../build/Debug-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFFEE0DE1DF9E35E00CB172E /* GoogleToolboxForMac.framework in Frameworks */,
 				CF723F981DF861F30065AC25 /* Social.framework in Frameworks */,
 				ECED03F19FF5A35D6B9C1ADD /* Pods_Falcon.framework in Frameworks */,
 			);
@@ -118,6 +121,7 @@
 		784D52606D2AB45FE26F18BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CFFEE0DD1DF9E35E00CB172E /* GoogleToolboxForMac.framework */,
 				CFFB7FB71DB505FA008B623F /* Social.framework */,
 				1A8FEBF6E717E94C00484A73 /* Pods_Falcon.framework */,
 				1A281F7BDEE127D91A2CCB45 /* Pods_FalconTests.framework */,
@@ -327,7 +331,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 99649YXF6E;
 						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					CFFB7F8F1DB503FD008B623F = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -691,16 +695,20 @@
 			baseConfigurationReference = CAF00DF95C258CF9122F1155 /* Pods-Falcon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 99649YXF6E;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/GoogleToolboxForMac",
+				);
 				INFOPLIST_FILE = Falcon/resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.Falcon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "b0a0e7a0-6013-406d-b65c-555051536b50";
+				PROVISIONING_PROFILE_SPECIFIER = "Falcon-Develop-1208";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -710,16 +718,21 @@
 			baseConfigurationReference = C444ACAD993C6EE849183640 /* Pods-Falcon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = 99649YXF6E;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/GoogleToolboxForMac",
+				);
 				INFOPLIST_FILE = Falcon/resource/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = moe.nnsnodnb.Falcon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "d6235ba6-6d4b-4b50-9d11-225fd6360912";
+				PROVISIONING_PROFILE_SPECIFIER = "Falcon-Release-1208";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
