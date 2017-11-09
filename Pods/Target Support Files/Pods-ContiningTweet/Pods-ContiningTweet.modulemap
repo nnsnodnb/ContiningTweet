@@ -1,6 +1,0 @@
-framework module Pods_ContiningTweet {
-  umbrella header "Pods-ContiningTweet-umbrella.h"
-
-  export *
-  module * { export * }
-}
