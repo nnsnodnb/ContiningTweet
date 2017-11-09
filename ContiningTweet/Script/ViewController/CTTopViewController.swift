@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import Social
-import RevealingSplashView
 import Firebase
 import FirebaseAnalytics
 import GoogleMobileAds
+import RevealingSplashView
 
 enum TweetStyle: Int {
     case text = 0
@@ -37,15 +36,6 @@ class CTTopViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    // MARK: - Setup
-    private func setup() {
         bannerSetup()
         splashSetup()
         firebaseSetup()
@@ -56,6 +46,12 @@ class CTTopViewController: UIViewController {
         userDefaults.set(0, forKey: "numberOfTweet")
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    // MARK: - Setup
+
     private func bannerSetup() {
         bannerView.adUnitID = adUnitID
         bannerView.rootViewController = self
@@ -108,12 +104,12 @@ class CTTopViewController: UIViewController {
     }
     
     private func firebaseSetup() {
-        FIRAnalytics.logEvent(withName: kFIREventSelectContent,
+        Analytics.logEvent(AnalyticsEventSelectContent,
                               parameters: [
-                                kFIRParameterContentType:"cont" as NSObject,
-                                kFIRParameterItemID:"1" as NSObject
+                                AnalyticsParameterContentType: "cont" as NSObject,
+                                AnalyticsParameterItemID: "1" as NSObject
             ])
-        FIRAnalytics.setUserPropertyString("TopScreen", forName: "boot_application")
+        Analytics.setUserProperty("TopScreen", forName: "boot_application")
     }
     
     private func advertisementSetup() {
